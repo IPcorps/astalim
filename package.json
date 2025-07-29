@@ -1,0 +1,43 @@
+{
+  "name": "astalim",
+  "version": "1.0.0.0",
+  "description": "A lightweight async task limiter. Run asynchronous operations with controlled concurrency and minimal overhead.",
+  "keywords": [
+    "async",
+    "concurrency",
+    "tasks",
+    "limiter",
+    "parallel",
+    "queue",
+    "executor",
+    "throttle",
+    "worker",
+    "pool"
+  ],
+  "scripts": {
+    "dev": "tsc --watch"
+  },
+  "author": {
+    "name": "Igor (IPcorp) Patievich",
+    "url": "https://github.com/IPcorps"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/IPcorps/astalim",
+  "bugs": "https://github.com/IPcorps/astalim/issues",
+  "engines": {
+    "node": ">=22.14.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IPcorps/astalim.git"
+  },
+  "main": "plugin/main.js",
+  "types": "plugin/main.ts",
+  "files": [
+    "plugin/**/*"
+  ],
+  "type": "module",
+  "devDependencies": {
+    "typescript": "5.8.2"
+  }
+}
