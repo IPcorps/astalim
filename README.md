@@ -1,6 +1,6 @@
 <div align="center">
 
-[![Русский](https://img.shields.io/badge/-Русский-blue)]([/../../](https://github.com/IPcorps/astalim/blob/main/README_RU.md))
+[![Русский](https://img.shields.io/badge/-Русский-blue)](https://github.com/IPcorps/astalim/blob/main/README_RU.md)
 # ASync TAsk LIMiter
 _(Parallel manager for asynchronous tasks with a limit on the number of concurrently executing tasks)_
 </div>
