@@ -1,6 +1,6 @@
 {
   "name": "astalim",
-  "version": "1.0.0.0",
+  "version": "1.0.1",
   "description": "A lightweight async task limiter. Run asynchronous operations with controlled concurrency and minimal overhead.",
   "keywords": [
     "async",
