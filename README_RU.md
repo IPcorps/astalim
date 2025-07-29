@@ -14,7 +14,7 @@ import astalim from "astalim"
 const limit: number = 5
 
 // Создаем исполнитель
-const tasks = astalim.tasks_async(limit)
+const tasks = astalim.taskPool(limit)
 
 // В цикле добавляем задачи на выполнение
 for (const path of <paths>) {
@@ -33,7 +33,7 @@ const results = await tasks.waitResult()
 
 # 1. Создание исполнителя
 ```ts
-const tasks = astalim.tasks_async(limit: number)
+const tasks = astalim.taskPool(limit: number)
 ```
 Одновременно будет выполняться **limit** задач.
 
@@ -73,7 +73,7 @@ const results = await tasks.waitResult()
 import astalim from "astalim"
 
 // Исполнитель с пулом в 3 задачи
-const tasks = astalim.tasks_async(3)
+const tasks = astalim.taskPool(3)
 
 // Генерация случайных псевдособытий
 function* randGen() {

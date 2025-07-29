@@ -14,7 +14,7 @@ import astalim from "astalim"
 const limit: number = 5
 
 // Create task executor
-const tasks = astalim.tasks_async(limit)
+const tasks = astalim.taskPool(limit)
 
 // Add tasks in a loop
 for (const path of <paths>) {
@@ -33,7 +33,7 @@ const results = await tasks.waitResult()
 
 # 1. Creating the Executor
 ```ts
-const tasks = astalim.tasks_async(limit: number)
+const tasks = astalim.taskPool(limit: number)
 ```
 At most **limit** tasks will be running concurrently.
 
@@ -76,7 +76,7 @@ Usage Variants:
 import astalim from "astalim"
 
 // Task executor with a pool of 3 tasks
-const tasks = astalim.tasks_async(3)
+const tasks = astalim.taskPool(3)
 
 // Generator for pseudo-random events
 function* randGen() {

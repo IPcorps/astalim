@@ -17,7 +17,7 @@
  * @description Creates a task manager that queues and executes asynchronous tasks with concurrency control.
  */
 export default {
-  tasks_async<T>(limit: number) {
+  taskPool<T>(limit: number) {
     const tasks: Promise<T>[] = []
     const executing = new Set<Promise<T>>()
     return {
