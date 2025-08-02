@@ -20,7 +20,7 @@ const tasks = astalim.taskPool(limit)
 for (const path of <paths>) {
   await tasks.addTask(async () => {
     ...
-    <Какая-либо работа с очередным path>
+    <Some work with the current path>
     ...
   })
 }
@@ -62,13 +62,6 @@ Waits for all tasks to fully complete and returns the results. The **results** o
   * **index**: index of the task (in the order they were added).
 
 ⚠️ The **waitResult()** call resets the internal state, so you can reuse **addTask()** afterward without creating a new **tasks** instance.
-
-Usage Variants:
-1. If neither the side effects nor the results of tasks matter (e.g., deleting files from a list where file existence or deletion errors don’t matter), you can skip calling **waitResult()** and let tasks silently complete in the background. 🔴 In this case, if you plan to execute another batch of tasks later, you must create a new **tasks** instance, as the current one might still be in an undefined state.
-2. If task results don’t matter, but you must wait for completion before continuing program execution, simply do without processing the output:
-```ts
-  await tasks.waitResult()
-```
 
 <h1 align="center">Example</h1>
 
